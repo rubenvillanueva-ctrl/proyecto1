@@ -1,24 +1,38 @@
-<!DOCTYPE html>
+<!DOCTYPE  html>
 <html>
-    <p>Hola</p>
-    
+    <head><meta charset="UTF-8"></head>
+     <body>
+            <header>REGISTRO </header>
+            <form action="respuesta.html"> 
+                
+                <fieldset>
+                    <legend>DATOS PERSONALES</legend><br>
+                     <label for="nombre"> Nombre </label><br>
+                     <input type="text" id = 'nombre' name="nombre" placeholder="Mi nombre" required minlength="2" maxlength="50"><br><br>
+                     <label for="apellidos"> Apellidos </label><br>
+                     <input type="text" id = 'apellidos' name="apellidos" placeholder=" Apellidos" required minlength="2" maxlength="50"><br><br>
+                     <label for="correo-electronico"> Correo Electronico </label><br>
+                     <input type="email" id = 'correo-electronico' name="correo-electronico" placeholder="Mi.correo@electronico.es" required minlength="2" maxlength="50"><br><br>
+                     <label for="contraseña"> Contraseña</label><br>
+                     <input type="password" id="contraseña" name="contraseña" required minlength="1" maxlength="30"><br><br>
+                     <label for="telefono">Telefono</label><br>
+                     <input type="tel" id="telefono" name="telefono" placeholder="Telefono" pattern="`[0-9+]{9,15}"><br><br>
+                     <label for="pagina privada"></label><br>
+                     <input type="url" id="pagina privada" name="pagina privada" placeholder="ww.pagina.es"><br><br>
+                     <label for="edad">Edad</label><br>
+                     <input type="number" id="edad" name="edad" placeholder="Tu edad" min="18" max="99"><br><br>
+                     <label for="cumpleaños">Fecha</label><br>
+                     <input type="date" id="cumpleaños" name="cumpleaños" placeholder="cumpleaños" min="01/01/1960" max="01/01/2027"><br><br>
+                     <label for="reserva">Reserva</label><br>
+                     <input type="time" id="reserva" name="reserva" placeholder="Te esperamos" min="09:00:00" max="20:00:00"><br><br>
 
-    <b> TEXTO EN NEGRITA </b> <br>
-    <i> TEXTO EN CURSIVA </i> <br>
-    <s> TEXTO TACHADO </s> <br>
-    <i> DIEGO EN BOLIVIA </i> <br>
-    <small> TEXTO EN PEQUEÑO </small></p>
-    <p>X<sub>2 </sub>y X<sup>3</sup></p>
-    <mark> TEXTO REMARCADO </mark><br>
-    <small>"pequeña cita"</small><br>
-    16:01 <br>
-    <i> titulo de un articulo </i></p>
-    <p><center>Texto largo del articulo al que hacemos referenicia</center></p>
-    <i>Mfernanda Oyuela</i><br>
-    <i>Vedruna.org</i></p>
-    <p>Sevilla</p>
-    <p>Hola</p>
-    <p>Adios</p>
+                    
+                    </fieldset>
+            
+            </form>
+        </body>
+    
+    
 
 
 
