@@ -1,6 +1,10 @@
 <!DOCTYPE  html>
 <html>
     <head><meta charset="UTF-8"></head>
+    <head>
+        <title>Mi pagina web</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
      <body>
             <header>REGISTRO </header>
             <form action="respuesta.html"> 
@@ -26,7 +30,15 @@
                      <label for="reserva">Reserva</label><br>
                      <input type="time" id="reserva" name="reserva" placeholder="Te esperamos" min="09:00:00" max="20:00:00"><br><br>
 
-                    
+                    </fieldset>
+                    <fieldset> 
+                        <legend>Elige el metodo de contacto</legend>
+                        <input type="radio" id="contacto email" name="contacto" value="email">
+                        <label for="contacto email">Contacto email</label><br>
+                         <input type="radio" id="contacto telefono" name="contacto" value="telefono">
+                        <label for="contacto telefono">Contacto telefono</label><br>
+                         <input type="radio" id="contacto cartas" name="contacto" value="cartas">
+                        <label for="contacto cartas">contacto cartas</label><br>
                     </fieldset>
             
             </form>
