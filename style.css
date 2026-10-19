@@ -1,15 +1,123 @@
 /* Mi hoja de estilo */
+
+/* Reset básico y fuente */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     padding: 40px 20px;
-     
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* Tarjeta del formulario */
+form {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 480px;
+    width: 100%;
+    padding: 30px;
+}
+
+/* Fieldsets (ojo: escríbelo como <fieldset>, no <fieloset>) */
+fieldset {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+legend {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #764ba2;
+    padding: 0 10px;
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+    accent-color: #667eea;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+fieldset input[type="radio"] + label {
+    display: inline;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/* Botón de envío (añade uno, no lo tienes) */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.5);
 }

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.35), transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.25), transparent 40%),
+        radial-gradient(circle at 60% 10%, rgba(59, 130, 246, 0.25), transparent 40%),
+        #0f0f1a;
+    background-attachment: fixed;
+
+}
+header { 
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: radial-gradient(
+        ellipse at center,
+        #ffffff 0%,
+        #00ffff 15%,
+        #0066ff 30%,
+        #8a2be2 45%,
+        #ff00ff 60%,
+        #ff1493 75%,
+        #ff4500 90%,
+        #ffff00 100%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    text-shadow: 0 0 12px rgba(255, 0, 255, 0.35);
+
+}
+/* ESTILO GENERAL DEL FORMULARIO */
+form[action="respuesta.html"] {
+    background-color: #ffffff; /* Pone el fondo del formulario blanco */
+    max-width: 500px; /* Establece un ancho máximo de 500 píxeles */
+    margin: 40px auto; /* Deja margen vertical y centra horizontalmente */
+    padding: 30px; /* Añade espacio entre el contenido y los bordes */
+    border: 1px solid #dcdfe6; /* Añade un borde fino de color gris claro */
+    border-radius: 15px; /* Redondea las esquinas del formulario */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Añade una sombra suave */
+    box-sizing: border-box; /* Incluye el borde y el padding en el ancho */
+}
+
+/* ESTILO DE LOS CAMPOS */
+form[action="respuesta.html"] input,
+form[action="respuesta.html"] select,
+form[action="respuesta.html"] textarea {
+    width: 100%; /* Hace que los campos ocupen todo el ancho disponible */
+    padding: 12px; /* Añade espacio interior a los campos */
+    margin: 8px 0 18px; /* Separa los campos de los demás elementos */
+    border: 1px solid #cbd5e1; /* Establece un borde gris claro */
+    border-radius: 8px; /* Redondea las esquinas de los campos */
+    box-sizing: border-box; /* Evita que el padding aumente el ancho */
+    font-size: 15px; /* Establece el tamaño de la letra */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Suaviza los cambios */
+}
+
+/* EFECTO AL SELECCIONAR UN CAMPO */
+form[action="respuesta.html"] input:focus,
+form[action="respuesta.html"] select:focus,
+form[action="respuesta.html"] textarea:focus {
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+    border-color: #2563eb; /* Cambia el borde a azul */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); /* Añade un halo azul */
+}
+
+/* ESTILO DEL BOTÓN DE ENVÍO */
+form[action="respuesta.html"] input[type="submit"],
+form[action="respuesta.html"] button[type="submit"] {
+    background-color: #2563eb; /* Establece el fondo azul */
+    color: white; /* Pone el texto en blanco */
+    padding: 13px; /* Añade espacio interior al botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 8px; /* Redondea las esquinas del botón */
+    font-size: 16px; /* Define el tamaño del texto */
+    font-weight: bold; /* Pone el texto en negrita */
+    cursor: pointer; /* Muestra una mano al pasar el ratón */
+    transition: background-color 0.3s, transform 0.2s; /* Suaviza los efectos */
+}
+
+/* EFECTO AL PASAR EL RATÓN POR EL BOTÓN */
+form[action="respuesta.html"] input[type="submit"]:hover,
+form[action="respuesta.html"] button[type="submit"]:hover {
+    background-color: #1d4ed8; /* Oscurece el azul al pasar el ratón */
+    transform: translateY(-2px); /* Sube el botón 2 píxeles */
+}
+
+/* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
+@media (max-width: 550px) {
+    form[action="respuesta.html"] {
+        margin: 20px auto; /* Reduce el margen en pantallas pequeñas */
+        padding: 20px; /* Reduce el espacio interior */
+    }
+}
