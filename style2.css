@@ -46,66 +46,75 @@ header {
     text-shadow: 0 0 12px rgba(255, 0, 255, 0.35);
 
 }
-/* ESTILO GENERAL DEL FORMULARIO */
-form[action="respuesta.html"] {
-    background-color: #ffffff; /* Pone el fondo del formulario blanco */
-    max-width: 500px; /* Establece un ancho máximo de 500 píxeles */
-    margin: 40px auto; /* Deja margen vertical y centra horizontalmente */
-    padding: 30px; /* Añade espacio entre el contenido y los bordes */
-    border: 1px solid #dcdfe6; /* Añade un borde fino de color gris claro */
-    border-radius: 15px; /* Redondea las esquinas del formulario */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Añade una sombra suave */
-    box-sizing: border-box; /* Incluye el borde y el padding en el ancho */
+form {
+    width: 450px;
+    max-width: 85%;
+    min-height: 400px;
+
+    margin: 50px auto;
+    padding: 35px;
+
+    background: linear-gradient(135deg, #ffffff, #eaf2f8);
+
+    border: 2px solid #3498db;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #2c3e50;
+
+    text-align: left;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    transition: all 0.3s ease;
 }
 
-/* ESTILO DE LOS CAMPOS */
-form[action="respuesta.html"] input,
-form[action="respuesta.html"] select,
-form[action="respuesta.html"] textarea {
-    width: 100%; /* Hace que los campos ocupen todo el ancho disponible */
-    padding: 12px; /* Añade espacio interior a los campos */
-    margin: 8px 0 18px; /* Separa los campos de los demás elementos */
-    border: 1px solid #cbd5e1; /* Establece un borde gris claro */
-    border-radius: 8px; /* Redondea las esquinas de los campos */
-    box-sizing: border-box; /* Evita que el padding aumente el ancho */
-    font-size: 15px; /* Establece el tamaño de la letra */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Suaviza los cambios */
+/* Títulos y etiquetas */
+form label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    color: #243447;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-/* EFECTO AL SELECCIONAR UN CAMPO */
-form[action="respuesta.html"] input:focus,
-form[action="respuesta.html"] select:focus,
-form[action="respuesta.html"] textarea:focus {
-    outline: none; /* Elimina el contorno predeterminado del navegador */
-    border-color: #2563eb; /* Cambia el borde a azul */
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); /* Añade un halo azul */
+/* Campos de entrada */
+form input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    font-size: 14px;
+    transition: 0.2s;
 }
 
-/* ESTILO DEL BOTÓN DE ENVÍO */
-form[action="respuesta.html"] input[type="submit"],
-form[action="respuesta.html"] button[type="submit"] {
-    background-color: #2563eb; /* Establece el fondo azul */
-    color: white; /* Pone el texto en blanco */
-    padding: 13px; /* Añade espacio interior al botón */
-    border: none; /* Elimina el borde del botón */
-    border-radius: 8px; /* Redondea las esquinas del botón */
-    font-size: 16px; /* Define el tamaño del texto */
-    font-weight: bold; /* Pone el texto en negrita */
-    cursor: pointer; /* Muestra una mano al pasar el ratón */
-    transition: background-color 0.3s, transform 0.2s; /* Suaviza los efectos */
+/* Cuando seleccionas un campo */
+form input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
-/* EFECTO AL PASAR EL RATÓN POR EL BOTÓN */
-form[action="respuesta.html"] input[type="submit"]:hover,
-form[action="respuesta.html"] button[type="submit"]:hover {
-    background-color: #1d4ed8; /* Oscurece el azul al pasar el ratón */
-    transform: translateY(-2px); /* Sube el botón 2 píxeles */
+/* Campos de fecha y números */
+form input[type="date"],
+form input[type="number"] {
+    cursor: pointer;
 }
 
-/* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
-@media (max-width: 550px) {
-    form[action="respuesta.html"] {
-        margin: 20px auto; /* Reduce el margen en pantallas pequeñas */
-        padding: 20px; /* Reduce el espacio interior */
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 500px) {
+    form {
+        margin: 20px 12px;
+        padding: 20px;
     }
 }

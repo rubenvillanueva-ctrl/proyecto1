@@ -1,0 +1,299 @@
+/* ==========================================================
+   style3.css · One Piece
+   Estilo: mar profundo + papel de cartel de "Se busca"
+   ========================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Pirata+One&display=swap");
+
+/* ---------- Variables ---------- */
+:root {
+    --mar-profundo: #0b2545;
+    --mar-medio: #13497a;
+    --ola: #1f6fa8;
+    --sombrero: #f2b632;      /* amarillo del sombrero de paja */
+    --bandera: #c8382b;       /* rojo vela / bandana */
+    --pergamino: #f3e3bd;     /* papel de cartel */
+    --pergamino-oscuro: #e3cb96;
+    --tinta: #2b1d0e;
+
+    --fuente-titulo: "Pirata One", "Georgia", serif;
+    --fuente-texto: "Lora", "Georgia", serif;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--fuente-texto);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--tinta);
+    background-color: var(--mar-profundo);
+    background-image: linear-gradient(180deg, var(--mar-profundo) 0%, var(--mar-medio) 100%);
+    background-attachment: fixed;
+}
+
+/* ---------- Cabecera ---------- */
+header {
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+    color: var(--pergamino);
+}
+
+header img {
+    display: block;
+    margin: 0 auto 1.25rem;
+    max-width: min(100%, 314px);
+    height: auto;
+    border: 5px solid var(--sombrero);
+    border-radius: 6px;
+    box-shadow: 0 10px 0 -4px var(--bandera), 0 18px 30px rgba(0, 0, 0, 0.45);
+}
+
+header h1 {
+    margin: 0;
+    font-family: var(--fuente-titulo);
+    font-weight: 400;
+    font-size: clamp(3rem, 9vw, 5.5rem);
+    line-height: 1;
+    letter-spacing: 0.04em;
+    color: var(--sombrero);
+    text-shadow: 3px 3px 0 var(--bandera), 6px 6px 0 rgba(0, 0, 0, 0.35);
+}
+
+header p {
+    margin: 0.75rem 0 0;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--pergamino);
+}
+
+/* ---------- Menú de navegación ---------- */
+nav {
+    background-color: rgba(8, 24, 45, 0.85);
+    border-top: 3px solid var(--sombrero);
+    border-bottom: 3px solid var(--sombrero);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav li {
+    flex: 1 1 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.85rem 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--fuente-titulo);
+    font-size: 1.25rem;
+    letter-spacing: 0.03em;
+    color: var(--pergamino);
+    border-bottom: 4px solid transparent;
+    transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--sombrero);
+    border-bottom-color: var(--bandera);
+    background-color: rgba(255, 255, 255, 0.06);
+    outline: none;
+}
+
+/* ---------- Pestañas ---------- */
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.35rem;
+}
+
+/* El div .pestana deja de ser una caja para que
+   etiquetas y contenidos se ordenen dentro de <main> */
+.pestana {
+    display: contents;
+}
+
+/* Radios ocultos pero accesibles con teclado */
+.pestana input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Etiquetas (las pestañas en sí) */
+.pestana label {
+    order: 1;
+    cursor: pointer;
+    padding: 0.6rem 1.5rem;
+    font-family: var(--fuente-titulo);
+    font-size: 1.3rem;
+    letter-spacing: 0.03em;
+    color: var(--pergamino);
+    background-color: var(--ola);
+    border: 3px solid var(--mar-profundo);
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.pestana label:hover {
+    background-color: var(--bandera);
+}
+
+.pestana input:checked + label {
+    background-color: var(--pergamino);
+    color: var(--tinta);
+    border-color: var(--sombrero);
+    transform: translateY(3px);
+    padding-bottom: calc(0.6rem + 3px);
+    position: relative;
+    z-index: 1;
+}
+
+.pestana input:focus-visible + label {
+    outline: 3px solid var(--sombrero);
+    outline-offset: 2px;
+}
+
+/* Paneles de contenido: solo se ve el de la pestaña activa */
+.pestana .contenido {
+    order: 2;
+    display: none;
+    width: 100%;
+    padding: 2rem clamp(1.25rem, 4vw, 2.5rem) 2.25rem;
+    background-color: var(--pergamino);
+    background-image: radial-gradient(ellipse at center, transparent 55%, rgba(120, 80, 20, 0.22) 100%);
+    border: 3px solid var(--sombrero);
+    border-radius: 0 10px 10px 10px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.pestana input:checked + label + .contenido {
+    display: block;
+}
+
+/* ---------- Contenido de los paneles ---------- */
+.contenido h2 {
+    margin: 0 0 1rem;
+    padding-bottom: 0.4rem;
+    font-family: var(--fuente-titulo);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    line-height: 1.1;
+    color: var(--bandera);
+    border-bottom: 3px double var(--tinta);
+}
+
+.contenido p {
+    margin: 0;
+    max-width: 68ch;
+}
+
+/* Lista de datos curiosos */
+.contenido ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.contenido li {
+    padding: 1rem 1.25rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-left: 6px solid var(--bandera);
+    border-radius: 0 8px 8px 0;
+    max-width: 68ch;
+}
+
+.contenido li img {
+    display: block;
+    margin-top: 1rem;
+    width: auto;
+    max-width: 100%;
+    max-height: 340px;
+    height: auto;
+    border: 3px solid var(--tinta);
+    border-radius: 4px;
+    box-shadow: 4px 4px 0 var(--pergamino-oscuro);
+}
+
+/* ---------- Pie de página ---------- */
+footer {
+    margin-top: 3rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    color: var(--pergamino);
+    background-color: rgba(8, 24, 45, 0.9);
+    border-top: 3px solid var(--sombrero);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width: 600px) {
+    body {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 0.7rem 1rem;
+    }
+
+    .pestana label {
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 0.55rem 0.75rem;
+        font-size: 1.1rem;
+    }
+
+    .pestana .contenido {
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+/* ---------- Accesibilidad ---------- */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+}

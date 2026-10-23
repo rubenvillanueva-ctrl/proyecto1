@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>RUBEN GUAPO</title>
+    <link rel="stylesheet" href="style3.css">
+
+    <!--
+    ==========================================
+    EJERCICIO: ESTRUCTURA BÁSICA DE HTML
+    Instrucciones:
+    1. Escribe tu nombre y el título de tu sitio.
+    2. Rellena cada etiqueta vacía según indica el comentario.
+    3. No borres la estructura: solo añade contenido.
+    ==========================================
+    -->
+
+</head>
+<body>
+
+    <!-- ================= CABECERA ================= -->
+    <!-- TODO: Añade aquí el logo/nombre del sitio y un título principal -->
+    <header>
+        <img src="https://static.wikia.nocookie.net/wikiseriesespaol/images/9/9a/One_Piece.jpg/revision/latest/scale-to-width-down/314?cb=20120928192155&path-prefix=es" alt="One Piece Wano"><!-- PON AQUÍ LA IMAGEN DEL LOGO -->
+        <h1>One Piece</h1>          <!-- PON AQUÍ EL TÍTULO PRINCIPAL -->
+        <p>La historia de Monkey D. Luffy y su tripulación</p>            <!-- PON AQUÍ UNA FRASE O ESLOGAN -->
+    </header>
+
+    <!-- ================= MENÚ ================= -->
+    <!-- TODO: Crea el menú de navegación con 4 enlaces: Inicio, Servicios, Sobre mí, Contacto -->
+    <nav>
+        <ul>
+            <li><a href="#Introducción">Introducción</a></li>
+            <li><a href="#Noticias y Actualidad">Noticias y Actualidad</a></li>
+            <li><a href="#Datos One Piece">Datos One Piece</a></li>
+            <li><a href="#Creador de la Obra">Creador de la Obra</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================= PESTAÑAS ================= -->
+    <!-- TODO: Crea un grupo de pestañas. En cada pestaña:
+           1. Escribe el título de la pestaña
+           2. Rellena el contenido de su panel -->
+    <main>
+
+        <!-- PESTAÑA 1 -->
+        <div class="pestana" name="Introducción" id="Introducción">
+            <input type="radio" name="pestana" id="p1" checked>
+            <label for="p1">Introducción</label>   <!-- TÍTULO DE LA PESTAÑA 1 -->
+
+            <div class="contenido">
+                <h2>Introducción</h2>              <!-- TÍTULO DEL CONTENIDO -->
+                <p>One Piece es una épica serie de manga y anime creada por Eiichiro Oda. Sigue las aventuras de Monkey D. Luffy, un joven con el cuerpo de goma tras comer una Fruta del Diablo, que se hace a la mar para reunir una tripulación, encontrar el legendario tesoro "One Piece" y convertirse en el Rey de los Piratas.</p>                <!-- TEXTO DE LA PESTAÑA 1 -->
+            </div>
+        </div>
+
+        <!-- PESTAÑA 2 -->
+        <div class="pestana" name="Noticias y Actualidad" id="Noticias y Actualidad">
+            <input type="radio" name="pestana" id="p2">
+            <label for="p2">Noticias y Actualidad</label>   <!-- TÍTULO DE LA PESTAÑA 2 -->
+
+            <div class="contenido">
+                <h2>Noticias y Actualidad</h2>
+                <p>Noticias del Manga y Anime: Fechas de estreno de nuevos capítulos, pausas del autor (Eiichiro Oda), tráilers y novedades de películas o del live-action.</p>                <!-- TEXTO DE LA PESTAÑA 2 -->
+            </div>
+        </div>
+
+        <!-- PESTAÑA 3 -->
+        <div class="pestana" name="Datos One Piece" id="Datos One Piece">
+            <input type="radio" name="pestana" id="p3">
+            <label for="p3">Datos One Piece</label>   <!-- TÍTULO DE LA PESTAÑA 3 -->
+
+            <div class="contenido" name="Contacto" id="Contacto">
+                <h2>Datos One Piece</h2>
+                <ul>
+                    <li>Récord Guinness Mundial: Es el manga escrito por un solo autor más vendido de toda 
+                        la historia, superando los 500 millones de copias en circulación en todo el mundo.
+
+                        <img src="https://cdn.kobo.com/book-images/3b045662-f308-49ea-b87e-05d08925eb94/353/569/90/False/one-piece-vol-90.jpg" alt="Manga"><!-- PON AQUÍ LA IMAGEN DEL LOGO -->
+                    </li>         <!-- ELEMENTO 1 -->
+                    <li>Iba a durar solo 5 años: Eiichiro Oda planeó originalmente que la historia durara solo
+                         5 años (de 1997 a 2002). Sin embargo, la creación de los Shichibukai (los Siete Señores 
+                         de la Guerra) amplió el universo y extendió la trama por más de 25 años.
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCUh8WH-ljmcIFqVaxXz8mxyIG9dItFRB7fb6E2Y5Ts3s96yxq1bfYR_Y&s=10" alt="Tiempo"><!-- PON AQUÍ LA IMAGEN DEL LOGO -->
+                        </li>         <!-- ELEMENTO 2 -->
+                    <li>Inspirado en piratas reales: Muchos personajes están basados en piratas de la vida real. 
+                        Por ejemplo, Edward Teach (Barbanegra) inspiró tanto a Marshall D. Teach 
+                        como a Edward Newgate (Barbablanca), y Jewelry Bonney está inspirada en la 
+                        famosa pirata Anne Bonny.
+                    <img src="https://i.blogs.es/7127e1/one-piece---inspiraciones-reales/450_1000.jpeg" alt="Piratas Reales"><!-- PON AQUÍ LA IMAGEN DEL LOGO -->
+                    </li>         <!-- ELEMENTO 3 -->
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
+    <!-- TODO: Añade el pie de página con tu nombre y el año -->
+    <footer>
+        <p>&copy; 2026 Rubén Villanueva. Todos los derechos reservados.    </p>
+    </footer>
+
+</body>
+</html>
