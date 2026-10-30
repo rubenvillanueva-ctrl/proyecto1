@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Formulario de Inscripción</title></head
+  ><br /><br />
+  <body>
+    <header>
+      <h1>Formulario de Inscripción</h1>
+    </header>
+    <fieldset>
+      <form action="confirmacion.html" method="get">
+        <legend>Datos de Inscripción</legend>
+        <label for="nombre">Nombre y apellidos:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          maxlength="40"
+          title="Solo letras (mayúsculas y minúsculas), máximo 40 caracteres"
+          placeholder="El bicho SIUUUUUU"
+          required
+        />
+
+        <label for="cp">Fecha de nacimiento:</label>
+        <input type="date" id="cp" name="cp" required />
+
+        <label for="sexo">Sexo:</label>
+        <label for="sexo">Masculino</label>
+        <input type="radio" id="sexo" name="sexo" value="masculino" required />
+        <label for="sexo">Femenino</label>
+        <input type="radio" id="sexo" name="sexo" value="femenino" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          maxlength="50"
+          placeholder="Ej: user@example.com"
+          required
+        />
+
+        <label for="curso">Curso:</label>
+        <select id="curso" name="curso" required>
+          <option value="">Selecciona un curso</option>
+          <option value="1">Curso 1</option>
+          <option value="2">Curso 2</option>
+        </select>
+
+        <label for="gustos">Aficiones:</label>
+        <label for="lectura">Lectura</label>
+        <input type="checkbox" id="lectura" name="aficiones" value="lectura" />
+        <label for="deportes">Deportes</label>
+        <input
+          type="checkbox"
+          id="deportes"
+          name="aficiones"
+          value="deportes"
+        />
+        <label for="musica">Música</label>
+        <input type="checkbox" id="musica" name="aficiones" value="musica" />
+
+        <label for="comentarios">Comentarios:</label>
+        <textarea
+          id="comentarios"
+          name="comentarios"
+          rows="4"
+          cols="50"
+          placeholder="Escribe tus comentarios aquí..."
+        ></textarea>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+      </form>
+    </fieldset>
+  </body>
+</html>

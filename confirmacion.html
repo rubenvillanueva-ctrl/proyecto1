@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Confirmación de Inscripción</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div id="resultados">
+      <h1>Confirmación de Inscripción</h1>
+      <p id="salida"></p>
+    </div>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById("salida").innerHTML =
+        "<strong>Nombre:</strong> " +
+        params.get("nombre") +
+        "<br>" +
+        "<strong>Email:</strong> " +
+        params.get("email") +
+        "<br>" +
+        "<strong>Curso:</strong> " +
+        params.get("curso");
+    </script>
+  </body>
+</html>
