@@ -20,7 +20,10 @@
         params.get("email") +
         "<br>" +
         "<strong>Curso:</strong> " +
-        params.get("curso");
+        params.get("curso") +
+        "<br>" +
+        "<strong>Aficiones:</strong> " +
+        params.getAll("aficiones").join(", ");
     </script>
   </body>
 </html>

@@ -1,0 +1,117 @@
+/* ===== Paleta de la costa italiana ===== */
+:root {
+  --azul-mar: #1f5f7a; /* Mediterráneo profundo */
+  --azul-claro: #d6e8ee; /* Espuma de mar */
+  --terracota: #c4623a; /* Tejados de Positano */
+  --arena: #f7edd9; /* Playa y fachadas */
+  --limon: #f0c350; /* Limones de Amalfi */
+  --oliva: #5f6f3a; /* Olivos y colinas */
+  --tinta: #2b2b2b;
+}
+
+/* ===== Base ===== */
+body {
+  margin: 0;
+  padding: 3rem 1rem;
+  background: var(--arena);
+  color: var(--tinta);
+  font-family: Georgia, "Palatino Linotype", "Times New Roman", serif;
+  line-height: 1.5;
+}
+
+/* ===== Tabla ===== */
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: #fffdf8;
+  border: 3px double var(--azul-mar);
+  box-shadow: 0 6px 18px rgba(31, 95, 122, 0.2);
+}
+
+/* Título */
+caption {
+  caption-side: top;
+  padding: 0.8rem;
+  font-size: 1.9rem;
+  font-style: italic;
+  letter-spacing: 0.12em;
+  font-variant: small-caps;
+  color: var(--azul-mar);
+}
+
+caption::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 3px;
+  margin: 0.4rem auto 0;
+  background: var(--terracota);
+}
+
+/* Celdas */
+th,
+td {
+  padding: 0.85rem 1rem;
+  text-align: center;
+  border: 1px solid #c9d9de;
+}
+
+/* Cabecera */
+thead th {
+  background: var(--azul-mar);
+  color: var(--arena);
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border-color: var(--azul-mar);
+  border-bottom: 4px solid var(--limon);
+}
+
+/* Columna de horas */
+tbody th[scope="row"] {
+  background: var(--terracota);
+  color: #fff;
+  font-style: italic;
+  font-weight: normal;
+  white-space: nowrap;
+  border-color: #a94f2b;
+}
+
+/* Filas alternas */
+tbody tr:nth-child(even) td {
+  background: var(--azul-claro);
+}
+
+/* Efecto al pasar el ratón */
+tbody td {
+  transition: background 0.25s ease;
+}
+
+tbody tr:hover td {
+  background: #fbe9b0;
+}
+
+/* Fila del recreo (celda con colspan) */
+td[colspan] {
+  background: var(--oliva) !important;
+  color: var(--arena);
+  font-style: italic;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* ===== Móvil ===== */
+@media (max-width: 600px) {
+  caption {
+    font-size: 1.4rem;
+  }
+  th,
+  td {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.85rem;
+  }
+}
